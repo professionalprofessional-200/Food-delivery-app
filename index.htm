@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery App</title>
+  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="style.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css">
+ <script src="js/modernizr.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;color:white;">Food Delivery App</h2>
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <!-- Carousel Images -->
+      <div class="carousel-item">
+        <img src="images/reddish.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>Reddish 500g</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733; 
+                          </div>
+                        <p>By <span style="color:orangered">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$2 <del style="color:black">$3.99</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/pototoes.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>Potatos 1Kg</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9734; 
+                          </div>
+                        <p>By <span style="color:green">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$1 <del style="color:black">$1.99</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>  
+      </div>
+      <div class="carousel-item">
+        <img src="images/tomotoes.jpg" alt="Image 1">
+        <h4>Fruits</h4>
+                <h3>Tomatos 200g</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#97334; 
+                          </div>
+                        <p>By <span style="color:orangered">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$0.30 <del style="color:black">$0.99</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/broccoli.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>Broccoli 1Kg</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+                          </div>
+                        <p>By <span style="color:green">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$1.50 <del style="color:black">$2.99</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/greenbeans.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>Green Beans 250g</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9734; 
+                          </div>
+                        <p>By <span style="color:green">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$1 <del style="color:black">$1.99</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/greentea.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>GreenTea 250g</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;
+                          </div>
+                        <p>By <span style="color:orangered">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$3 <del style="color:black">$7</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/onion.jpg" alt="Image 1">
+        <h4>Vegetables</h4>
+                <h3>Onion 1Kg</h3>
+                  <div class="stars">
+                            &#9733;&#9733;&#9733;&#9733;
+                          </div>
+                        <p>By <span style="color:orangered">Mister.food</span></p>
+                        <div style="display: flex;"><h4 style="color:orangered">$0.50 <del style="color:black">$2</del></h4><button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button></div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+  </div>
+
+
+  <section class="banner-section">
+    <div class="container">
+        <div class="row">
+            <!-- Free Delivery Card -->
+            <div class="col">
+                <div class="promo-card delivery-card">
+                    <div class="delivery-content">
+                      <button class="order-btn1">Free delivery</button>
+                        <h2>Free delivery over $50</h2>
+                        <p>Shop $50 product and get free delivery anywhere.</p>
+                        <a href="#" class="shop-btn">Shop Now →</a>
+                    </div>
+                    <div class="delivery-image">
+                        <img src="images/deliveryperson.png" alt="Delivery Person">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Organic Food Card -->
+            <div class="col">
+                <div class="promo-card organic-card">
+                    <div class="organic-content">
+                      <button class="order-btn2">60% off</button>
+                        <h2>Organic <br>Food</h2>
+                        <p>Save up to 60% off on<br> your first order</p>
+                        <a href="#" class="order-btn">Order Now →</a>
+                    </div>
+                    <img src="images/group.png" alt="Organic Fruits" class="fruit-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="filter-container">
+  <h1 style="color:white">Daily Best Sales<span>
+  <button onclick="filterProducts('featured')">Featured</button>
+  <button onclick="filterProducts('popular')">Popular</button>
+  <button onclick="filterProducts('new')">New</button></span></h1>
+  <div class="timer">
+    Expires in: <span id="countdown">10 : 56 : 21</span>
+</div>
+</div>
+</div>
+<div style="display: flex;">
+<div class="products-container">
+  <div class="product-card" data-category="featured">
+    <img src="images/coffee.jpg" class="img-fluid" alt="Image">
+    <h4>Coffee & teas</h4>
+    <h3>Coffe 1kg</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Unicode for filled stars -->
+      </div>
+    <p>By <span style="color:orangered">Mr.food</span></p>
+    <h4 style="color:orangered">$20 <del style="color:gray">$25</del></h4>
+    <progress value="20" max="50"></progress>
+    <p>sold:20/50</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="featured">
+    <img src="images/sausage.jpg" class="img-fluid" alt="Image">
+    <h4>Meat</h4>
+    <h3>Halal Sausage 350g</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:orangered">Mr.food</span></p>
+      <h4 style="color:orangered">$4 <del style="color:gray">$10</del></h4>
+    <progress value="7" max="20"></progress>
+    <p>sold:7/20</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="featured">
+    <img src="images/greentea.jpg" class="img-fluid" alt="Image">
+    <h4>Coffee & teas</h4>
+    <h3>Green Tea 250g</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:orangered">Mr.food</span></p>
+      <h4 style="color:orangered">$3 <del style="color:gray">$7</del></h4>
+    <progress value="32" max="50"></progress>
+    <p>sold:32/50</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="featured">
+    <img src="images/onion.jpg" class="img-fluid" alt="Image">
+    <h4>Vegetable</h4>
+    <h3>Onion 1kg</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:orangered">Mr.food</span></p>
+      <h4 style="color:orangered">$0.50 <del style="color:gray">$2</del></h4>
+    <progress value="2" max="10"></progress>
+    <p>sold:2/10</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+
+  <div class="product-card" data-category="popular">
+    <img src="images/reddish.jpg" class="img-fluid" alt="Image">
+    <h4>Vegetables</h4>
+    <h3>Reddish 500g</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Unicode for filled stars -->
+      </div>
+    <p>By <span style="color:orangered">Mr.food</span></p>
+    <h4 style="color:orangered">$2 <del style="color:gray">$3.99</del></h4>
+    <progress value="2" max="5"></progress>
+    <p>sold:2/5</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="popular">
+    <img src="images/tomotoes.jpg" class="img-fluid" alt="Image">
+    <h4>Vegetables</h4>
+    <h3>Tomotos 200g</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:orangered">Mr.food</span></p>
+      <h4 style="color:orangered">$0.30 <del style="color:gray">$0.99</del></h4>
+    <progress value="7" max="20"></progress>
+    <p>sold:7/20</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="new">
+    <img src="images/broccoli.jpg" class="img-fluid" alt="Image">
+    <h4>Vegetables</h4>
+    <h3>Broccoli 1Kg</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:green">Mr.food</span></p>
+      <h4 style="color:orangered">$1.50 <del style="color:gray">$2.99</del></h4>
+    <progress value="32" max="50"></progress>
+    <p>sold:32/50</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+  <div class="product-card" data-category="new">
+    <img src="images/greenbeans.jpg" class="img-fluid" alt="Image">
+    <h4>Vegetable</h4>
+    <h3>Onion 1kg</h3>
+    <div class="stars">
+        &#9733;&#9733;&#9733;&#9733;&#9734; <!-- Unicode for filled stars -->
+      </div>
+      <p>By <span style="color:green">Mr.food</span></p>
+      <h4 style="color:orangered">$1 <del style="color:gray">$1.99</del></h4>
+    <progress value="2" max="10"></progress>
+    <p>sold:2/10</p>
+    <button>Add to Cart <span class="heart" onclick="toggleHeart(this)">&#9825;</span> </button>
+  </div>
+</div>
+<div class="form-container">
+  <h3>10% OFF</h3>
+  <p>For new members signing up for the first time</p>
+  <form id="signup-form">
+      <label for="email">Email address:</label>
+      <input type="email" id="email" placeholder="johndoe@gmail.com">
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Maximum 8 characters" maxlength="8">
+      <button type="submit">Register Now</button>
+  </form>
+</div>
+</div>
+
+
+
+<div class="categories-container">
+    
+  <!-- Top Sells Section -->
+  <div class="category">
+    <h3>Top Sells</h3>
+    <div class="product">
+      <img src="images/orange.jpg" alt="Orange">
+      <div class="product-info">
+        <h4>Orange 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/spinach.jpg" alt="Spinach">
+      <div class="product-info">
+        <h4>Spinach 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/strawberry.jpg" alt="Strawberries">
+      <div class="product-info">
+        <h4>Strawberries 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Rated Section -->
+  <div class="category">
+    <h3>Top Rated</h3>
+    <div class="product">
+      <img src="images/orange.jpg" alt="Orange">
+      <div class="product-info">
+        <h4>Orange 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/spinach.jpg" alt="Spinach">
+      <div class="product-info">
+        <h4>Spinach 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/apple.jpg" alt="Apple">
+      <div class="product-info">
+        <h4>Apple 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trending Items Section -->
+  <div class="category">
+    <h3>Trending Items</h3>
+    <div class="product">
+      <img src="images/carrot.jpg" alt="Carrot">
+      <div class="product-info">
+        <h4>Carrot 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/pototoes.jpg" alt="Potato">
+      <div class="product-info">
+        <h4>Potato 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/orange.jpg" alt="Orange">
+      <div class="product-info">
+        <h4>Orange 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recently Added Section -->
+  <div class="category">
+    <h3>Recently Added</h3>
+    <div class="product">
+      <img src="images/apple.jpg" alt="Apple">
+      <div class="product-info">
+        <h4>Apple 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/carrot.jpg" alt="Carrot">
+      <div class="product-info">
+        <h4>Carrot 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+    <div class="product">
+      <img src="images/strawberry.jpg" alt="Strawberries">
+      <div class="product-info">
+        <h4>Strawberries 1kg</h4>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <span class="price">$2 <del>$3.99</del></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <script src="script.js"></script>
+  
+  <script src="js/all.js"></script>
+	<script src="js/parallaxie.js"></script>
+	<script src="js/headline.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.vide.js"></script>
+
+</body>
+</html>

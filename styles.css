@@ -1,0 +1,489 @@
+body{
+    background-color: hsl(101.05deg 33.33% 11.18%);
+  }
+    /* Carousel Container */
+    .carousel-container {
+      width: 80%; /* Adjust as needed */
+      overflow: hidden;
+      margin: auto;
+      position: relative;
+    }
+
+    /* Carousel Wrapper */
+    .carousel-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    /* Individual Image */
+    .carousel-item {
+      min-width: 25%; /* Show 4 images at a time (100% / 4) */
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: white;
+      margin: 0 10px;
+      line-height: 0%;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Navigation Buttons */
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: orangered;
+      color: white;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 5px 15px;
+      z-index: 100;
+      transition: background-color 0.3s;
+      border-radius: 50%;
+      border: 2px solid white;
+      
+    }
+
+    .carousel-button:hover {
+      background-color: white;
+      color:orangered;
+      border: 2px solid orangered;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  
+    
+button{
+    margin: 0 auto;
+    text-align: center;
+    /* padding: 5px; */
+    color:orangered;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+button:hover{
+    border: none;
+}
+
+.heart {
+    font-size: 1.5em;          /* Adjust icon size */
+    color: lightgray;        /* Default empty color */
+    cursor: pointer;         /* Pointer cursor on hover */
+    transition: color 0.3s;  /* Smooth transition */
+  }
+
+  .heart.filled {
+    color: red;              /* Filled heart color */
+  }
+
+  h3,h4,p{
+    padding: 10px 0;
+}
+
+.stars {
+    font-size: 2em; /* Adjust size of stars */
+    color: gold;
+    padding: 10px;
+}
+
+h4{
+    color:gray;
+}
+
+
+/*---CSS for Promotions--*/
+.banner-section {
+    background-color: inherit;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 580px;
+}
+
+.promo-card {
+    /* border-radius: 15px; */
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.delivery-card {
+    background: linear-gradient(#307530, #0c2c0c), #0c2c0c;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.organic-card {
+    background: linear-gradient(#d86055, rgba(0, 0, 0, 0.2)), #000000;
+    color: white;
+    padding: 30px;
+}
+
+.delivery-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.delivery-image {
+    flex: 1;
+    text-align: right;
+}
+
+.delivery-image img {
+    max-height: 240px;
+    object-fit: cover;
+}
+
+.fruit-image {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.shop-btn, .order-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.shop-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.order-btn {
+    background-color: white;
+    color: #dd6b60;
+}
+
+.shop-btn:hover, .order-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .delivery-card {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .delivery-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .delivery-image {
+        text-align: center;
+    }
+
+    .delivery-image img {
+        max-height: 200px;
+    }
+
+    .fruit-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.promo-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.order-btn1{
+    background-color: #65af65;
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+}
+  
+.order-btn2{
+    background-color: #634a49;
+    color:white;
+    font-size: 20px;
+    padding: 7px;
+}
+
+/*--Css for filter field--*/
+
+@import url(css/prettyPhoto.css);
+@import url(css/font-awesome.min.css);
+
+.hoverbutton {
+    background-color: #333333;
+    position: absolute;
+    color: #ffffff !important;
+    top: 70%;
+    font-size: 21px;
+    z-index: 12;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: -20px auto;
+}
+
+.filter-container {
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 20px\;
+}
+
+.filter-container button {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: inherit;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.filter-container button:hover {
+   color: gold;
+}
+
+.products-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #fff;
+    line-height:0 ;
+}
+
+.product-card h4 {
+    margin: 10px 0;
+}
+
+.product-card img{
+    height:150px;
+    width:150px;
+}
+
+
+.form-container {
+    padding: 20px;
+    width: 25%;
+    background-color: #f8b400;
+    color: white;
+    border-radius: 5px;
+    /* position: static; */
+    border: 2px solid gold;
+    max-height: 400px;
+    max-width: 300px;
+}
+
+.form-container h3 {
+    font-size: 24px;
+}
+
+.form-container p {
+    font-size: 16px;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-form label {
+    margin-top: 10px;
+}
+
+#signup-form input {
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#signup-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.timer {
+    background-color: orange;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+progress {
+    width: 100%; /* Full width */
+    height: 20px; /* Adjust height */
+    background-color: orangered;
+  }
+
+button{
+    margin: 0 auto;
+    text-align: center;
+    /* padding: 5px; */
+    color:orangered;
+    border: none;
+}
+
+button:hover{
+    border: none;
+}
+
+/* CSS for Container for all categories */
+  .categories-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Individual category styling */
+  .category {
+    padding: 15px;
+    border-radius: 8px;
+    width: 23%;
+  }
+
+  /* Category header */
+  .category h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #f8b400;
+    padding-bottom: 5px;
+  }
+
+  /* Product styling */
+  .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .product img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5em;;
+  }
+
+  .product-info h4 {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
+  .stars {
+    color: gold;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .product-info .price {
+    color: #f8b400;
+    font-weight: bold;
+  }
+
+  .product-info .price del {
+    color: #ccc;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+
